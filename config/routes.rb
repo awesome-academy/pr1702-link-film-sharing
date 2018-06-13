@@ -12,8 +12,13 @@ Rails.application.routes.draw do
     resources :posts do
       resources :comments
     end
-    resources :users, only: [:show, :index]
+    resources :users, only: [:show, :index] do
+      member do
+        get :following, :followers, :friends
+      end
+    end
     resources :search, only: [:index]
     resources :categories, only: [:index, :show]
+    resources :relationships, only: [:create, :accept, :destroy]
   end
 end

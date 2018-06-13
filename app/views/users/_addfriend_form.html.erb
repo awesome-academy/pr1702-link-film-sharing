@@ -1,0 +1,7 @@
+<div id="follow-form-<%= user.id %>">
+  <% if current_user.following?(user) %>
+    <%= render 'unfriend', user: user %>
+  <% else %>
+    <%= render 'addfriend', user: user %>
+  <% end %>
+</div>

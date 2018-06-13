@@ -1,4 +1,6 @@
 vi:
+  addfriend_success: "Kết bạn thành công"
+  unfriend_success: "Đã hủy bạn bè"
   is_not_supported: "Không được hỗ trợ"
   category_not_found: "Không tìm thấy danh mục"
   you_can_not_do_that: "Bạn không thể làm điều đó"
@@ -163,3 +165,9 @@ vi:
       movie_news: "Phim mới"
       updated_news: "Tin tức cập nhật"
       posted_a_new_post: " đã đăng một bài đăng mới "
+  users:
+    show:
+      edit_profile: "Sửa thông tin"
+      friends: "Bạn Bè"
+      your_posts: "Các bài đăng của bạn"
+      name: "Tên của bạn"

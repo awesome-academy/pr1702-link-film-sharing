@@ -1,4 +1,6 @@
 en:
+  addfriend_success: "Addfriend Successfully"
+  unfriend_success: "Unfriend Successfully"
   is_not_supported: "is not supported"
   category_not_found: "Category not found"
   you_can_not_do_that: "You can not do that"
@@ -163,3 +165,9 @@ en:
       movie_news: "Movie News"
       updated_news: "Updated News"
       posted_a_new_post: " posted a new post "
+  users:
+    show:
+      edit_profile: "Edit Profile"
+      friends: "Your Friends"
+      your_posts: "Your Posts"
+      name: "Your Name"
