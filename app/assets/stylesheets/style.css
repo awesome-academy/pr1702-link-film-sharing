@@ -1647,3 +1647,15 @@ h3.head {
 .pagination {
     margin-left: 450px;
 }
+
+.wthree-news-left {
+    border: 1px solid black;
+}
+
+.news-right-top {
+    border: 1px solid black;
+}
+
+.pagination-new {
+    margin-left: 260px;
+}

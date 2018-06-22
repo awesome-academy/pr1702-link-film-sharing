@@ -47,6 +47,9 @@
 												</div>
 			                <% end %>
 			              <% end %>
+                    <div class="clearfix">
+          					</div>
+          					<p ><%= will_paginate @posts, class: "pagination-new" %></p>
 									</div>
 								</div>
 							</div>
@@ -67,18 +70,18 @@
 										<div class="date-text">
 											<% if @updated_posts.present? %>
 												<% @updated_posts.each do |post| %>
-													<a href="<%= post_path(post) %>"><%= post.created_at %></a>
+													<a href="<%= post_path(post) %>"><%= time_ago_in_words post.created_at %><%= t(".ago")%></a>
 													<p><%= post.user.name %><%= t(".posted_a_new_post") %><%= post.title %></p>
 												<% end %>
 											<% end %>
 										</div>
 									</div>
 									<script>
-									function blinker() {
-										$('.blinking').fadeOut(500);
-										$('.blinking').fadeIn(500);
-									}
-									setInterval(blinker, 1000);
+										function blinker() {
+											$('.blinking').fadeOut(500);
+											$('.blinking').fadeIn(500);
+										}
+										setInterval(blinker, 1000);
 									</script>
 									<script>
 										function cycle($item, $cycler){

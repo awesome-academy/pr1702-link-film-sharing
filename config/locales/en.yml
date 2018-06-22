@@ -10,6 +10,8 @@ en:
     show:
       view: "View: "
   comments:
+    create:
+      not_empty: "Content cannot be empty!"
     comment:
       delete_comment: "Delete comment"
       edit_comment: "Edit comment"
@@ -171,3 +173,4 @@ en:
       friends: "Your Friends"
       your_posts: "Your Posts"
       name: "Your Name"
+      ago: " ago"

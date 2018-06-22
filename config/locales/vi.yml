@@ -10,6 +10,8 @@ vi:
     show:
       view: "Lượt xem: "
   comments:
+    create:
+      not_empty: "Nội dung bình luận không được để trống!"
     comment:
       delete_comment: "Xóa bình luận"
       edit_comment: "Sửa bình luận"
@@ -171,3 +173,4 @@ vi:
       friends: "Bạn Bè"
       your_posts: "Các bài đăng của bạn"
       name: "Tên của bạn"
+      ago: " trước đây"

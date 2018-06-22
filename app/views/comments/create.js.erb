@@ -1,0 +1,6 @@
+<% if @comment.persisted? %>
+  $('#comment-list').prepend('<%= escape_javascript render @comment %>');
+  $('#comment_content').val('');
+<% else %>
+  alert('<%= escape_javascript I18n.t("comments.create.not_empty") %>');
+<% end %>

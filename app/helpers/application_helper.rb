@@ -9,6 +9,6 @@ module ApplicationHelper
   end
 
   def all_categories
-    Category.all
+    Category.all.in_groups_of((Category.count.to_f/3).ceil)
   end
 end

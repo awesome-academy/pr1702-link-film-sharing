@@ -30,7 +30,7 @@ class Post < ApplicationRecord
   }
 
   scope :load_time_create_post, -> {
-    select("id, created_at, title, user_id")
+    select("id, created_at, title, original_name, user_id")
   }
 
   scope :all_except, ->(post_id) {where.not(id: post_id)}

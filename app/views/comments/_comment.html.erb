@@ -1,8 +1,4 @@
-<% if user_signed_in? %>
-  <%= render 'comments/form' %>
-<% end %>
-
-<% @comments.each do |comment| %>
+<div id="comment-content-<%= comment.id %>">
   <p><b><%= comment.user.name %></b></p>
   <p><%= comment.content %></p>
 
@@ -10,4 +6,4 @@
     <%= link_to t(".delete_comment"), [comment.post, comment], method: :delete %>
     <%= link_to t(".edit_comment"), edit_post_comment_path(comment.post,comment) %>
   <% end %>
-<% end %>
+</div>

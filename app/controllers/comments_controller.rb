@@ -8,10 +8,8 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.save
 
-    if @comment.save
-      redirect_to post_path(@post)
-    else
-      render :new
+    respond_to do |format|
+      format.js
     end
   end
 
