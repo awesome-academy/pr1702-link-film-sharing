@@ -13,6 +13,15 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </div>
+
+  <div>
+    <%= f.file_field :picture %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %> <i><%= t(".leave_blank_if_you_don't_want_to_change_it") %></i><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>

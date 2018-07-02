@@ -1404,6 +1404,10 @@ h3.head {
   margin-top: 55px;
 }
 
+.info-post {
+  color: black;
+}
+
 .au-name {
   margin: 0 0 0em 0;
   font-weight: 400;
@@ -1645,6 +1649,7 @@ h3.head {
 }
 
 .news-right-top {
+    height: 800px;
     border: 1px solid black;
 }
 
@@ -1757,4 +1762,21 @@ h3.head {
 
 .content-post-new {
   height: 110px !important;
+}
+
+.list-users {
+    border: 5px solid #ffffff;
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    background-color: #f7f7f7;
+    padding: 5px;
+    position: relative;
+
+    .avatar {
+        float: left;
+        width: auto;
+        height: 120px;
+    }
 }
