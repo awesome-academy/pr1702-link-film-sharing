@@ -2,11 +2,11 @@ class UsersController < ApplicationController
   before_action :load_user, except: :index
 
   def show
-    @posts = @user.posts.load_info_new.order("created_at DESC").paginate page: params[:page], per_page: 10
+    @posts = @user.posts.load_info_new.order("created_at DESC").paginate page: params[:page], per_page: Settings.user_post
   end
 
   def index
-    @users = User.all
+    @users = User.all.paginate(page: params[:page], per_page: Settings.user_post).order('created_at desc')
   end
 
   def following
