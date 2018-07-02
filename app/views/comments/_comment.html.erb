@@ -3,11 +3,12 @@
     <span class="tip tip-right"></span>
     <div class="message">
       <p><b><%= comment.user.name %></b></p>
-      <p><%= comment.content %></p>
+      <p id="comment-text-<%= comment.id %>"><%= comment.content %></p>
 
       <% if current_user == comment.user %>
-        <%= link_to t(".delete_comment"), [comment.post, comment], method: :delete %>
-        <%= link_to t(".edit_comment"), edit_post_comment_path(comment.post,comment) %>
+        <%= time_ago_in_words comment.created_at %><%= t(".ago")%>
+        <%= link_to t(".delete_comment"), [comment.post, comment], remote: true, method: :delete %> /
+        <%= link_to t(".edit_comment"), edit_post_comment_path(comment.post,comment), remote: true %>
       <% end %>
     </div>
   </div>

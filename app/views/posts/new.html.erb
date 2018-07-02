@@ -5,51 +5,112 @@
     <%= form_for @post do |f| %>
       <%= render 'devise/shared/error_messages' %>
       <div class="row-1 new-post">
-        <div class="col-md-4">
-          <%= t(".title") %><br>
-          <%= f.text_field :title %>
+        <div class="row-new-post-1">
+          <div class="col-md-6 desciption-post">
+            <div class="form-group">
+              <label for="title"><%= t(".title") %><br></label>
+              <span class="description-new"><%= t(".desciption_title") %></span>
+              <%= f.text_field :title, class: "form-control", placeholder: t(".placeholder_title") %>
+            </div>
           <br>
-          <%= t(".content") %><br>
-          <%= f.text_area :content %>
-          <br>
-          <%= t(".original_name") %><br>
-          <%= f.text_field :original_name %>
-          <br>
-          <%= t(".image") %><br>
-          <%= f.file_field :image %>
-          <br>
+          </div>
+          <div class="col-md-6 desciption-post">
+            <div class="form-group">
+              <label for="original-name"><%= t(".original_name") %><br></label>
+              <span class="description-new"><%= t(".desciption_original_name") %></span>
+              <%= f.text_field :original_name, class: "form-control", placeholder: t(".placeholder_original_name") %>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <%= t(".directors") %><br>
-          <%= f.text_field :directors %>
-          <br>
-          <%= t(".cast") %><br>
-          <%= f.text_field :cast %>
-          <br>
-          <%= t(".date_of_manufacture") %><br>
-          <%= f.number_field :year %>
-          <br>
-          <%= t(".time") %><br>
-          <%= f.number_field :time %> min
-          <br>
-          <%= t(".magnet_link") %><br>
-          <%= f.text_field :magnet_link %>
-          <br>
+        <div class="row-new-post-2">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="content"><%= t(".content") %><br></label>
+              <span class="description-new"><%= t(".desciption_content") %></span>
+              <%= f.text_area :content, class: "form-control content-post-new", placeholder: t(".placeholder_content") %>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <%= t(".subscene_link") %><br>
-          <%= f.text_field :subscene %>
-          </br>
-          <%= t(".trailer") %><br>
-          <%= f.text_field :link_trailer %>
-          </br>
-          <%= t(".nation") %><br>
-          <%= f.text_field :nation %>
-          <br>
-          <%= t(".category") %><br>
-          <%= collection_select(:post, :category_ids, @category, :id, :name, {},
-            {multiple: true, class: "ui fluid selection search dropdown"}) %>
-          </br>
+        <div class="row-new-post-3">
+          <div class="col-md-6">
+              <div class="form-group">
+              <label for="date-of-manufacture"><%= t(".date_of_manufacture") %><br></label>
+              <span class="description-new"><%= t(".desciption_date_of_manufacture") %></span>
+              <%= f.number_field :year, class: "form-control", placeholder: t(".placeholder_date") %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="time"><%= t(".time") %><br></label>
+              <span class="description-new"><%= t(".desciption_time") %></span>
+              <%= f.number_field :time, class: "form-control", placeholder: t(".placeholder_time") %>
+            </div>
+          </div>
+        </div>
+        <div class="row-new-post-4">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="directors"><%= t(".directors") %><br></label>
+              <span class="description-new"><%= t(".desciption_directors") %></span>
+              <%= f.text_field :directors, class: "form-control", placeholder: t(".placeholder_directors") %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="cast"><%= t(".cast") %><br></label>
+              <span class="description-new"><%= t(".desciption_cast") %></span>
+              <%= f.text_field :cast, class: "form-control", placeholder: t(".placeholder_cast") %>
+            </div>
+          </div>
+        </div>
+        <div class="row-new-post-5">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="magnet-link"><%= t(".magnet_link") %><br></label>
+              <span class="description-new"><%= t(".desciption_magnet_link") %></span>
+              <%= f.text_field :magnet_link, class: "form-control", placeholder: t(".placeholder_dow") %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="subscene-link"><%= t(".subscene_link") %><br></label>
+              <span class="description-new"><%= t(".desciption_sub") %></span>
+              <%= f.text_field :subscene, class: "form-control", placeholder: t(".placeholder_sub") %>
+            </div>
+          </div>
+        </div>
+        <div class="row-new-post-6">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="trailer"><%= t(".trailer") %><br></label>
+              <span class="description-new"><%= t(".desciption_trailer_id") %></span>
+              <%= f.text_field :link_trailer, class: "form-control", placeholder: t(".placeholder_trailer") %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nation"><%= t(".nation") %><br></label>
+              <span class="description-new"><%= t(".desciption_nation") %></span>
+              <%= f.text_field :nation, class: "form-control", placeholder: t(".placeholder_nation") %>
+            </div>
+          </div>
+        </div>
+        <div class="row-new-post-7">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="image"><%= t(".image") %><br></label>
+              <span class="description-new"><%= t(".desciption_image") %></span>
+              <%= f.file_field :image, class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="category"><%= t(".category") %><br></label>
+              <span class="description-new"><%= t(".desciption_category") %></span>
+              <%= collection_select(:post, :category_ids, @category, :id, :name, {},
+              {multiple: true, class: "ui fluid selection search dropdown"}) %>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row-2 submit-new-post">

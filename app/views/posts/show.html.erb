@@ -33,12 +33,12 @@
               <% if current_user == @post.user %>
                 <li>
                   <%= link_to post_path(@post), method: :delete,data: {confirm: t(".are_you_sure?")} do %>
-                    <i class="fa fa-trash fa-4x" title="Delete Post"></i>
+                    <i class="fa fa-trash fa-2x" title="Delete"></i>
                   <% end %>
                 </li>
                 <li>
                   <%= link_to edit_post_path(@post) do %>
-                    <i class="fa fa-edit fa-4x" title="Edit Post"></i>
+                    <i class="fa fa-edit fa-2x"  title="Edit"></i>
                   <% end %>
                 </li>
               <% end%>

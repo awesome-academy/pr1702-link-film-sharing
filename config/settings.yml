@@ -1,2 +1,5 @@
 post_limit_60: 60
 post_limit_10: 10
+post_limit_25: 25
+post_limit_600: 600
+post_limit_8: 8

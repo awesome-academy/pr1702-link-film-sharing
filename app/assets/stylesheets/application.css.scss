@@ -31,3 +31,13 @@
   right: 1px;
   top: 0px;
 }
+
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size !important;
+    height: $size !important;
+    width: $size !important;
+  }
+}

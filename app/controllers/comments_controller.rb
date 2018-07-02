@@ -15,7 +15,9 @@ class CommentsController < ApplicationController
 
   def destroy
     if @comment.destroy
-      redirect_to post_path(@post)
+      respond_to do |format|
+        format.js
+      end
     else
       redirect_to @comment.post
     end
@@ -25,10 +27,9 @@ class CommentsController < ApplicationController
   end
 
   def update
-    if @comment.update(comment_params)
-      redirect_to post_path(@post)
-    else
-      render :edit
+    @comment.update comment_params
+    respond_to do |format|
+      format.js
     end
   end
 

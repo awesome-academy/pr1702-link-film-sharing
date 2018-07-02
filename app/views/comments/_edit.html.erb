@@ -1,0 +1,4 @@
+<%= form_for [@post, @comment], remote: true do |f| %>
+  <%= f.text_area :content, class: "comments-form-edit" %>
+  <%= f.submit "Update more more more", class: "update-comment-btn" %>
+<% end %>

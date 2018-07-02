@@ -9,9 +9,9 @@ class Post < ApplicationRecord
   ratyrate_rateable "rating", "quality", "original_score"
   mount_uploader :image, ImageUploader
 
-  validates :title, presence: true
-  validates :content, presence: true
-  validates :original_name, presence: true
+  validates :title, presence: true, length: {maximum: Settings.post_limit_25}
+  validates :content, presence: true,  length: {maximum: Settings.post_limit_600}
+  validates :original_name, presence: true, length: {maximum: Settings.post_limit_25}
   validates :time, presence: true
   validates :nation, presence: true
   validates :image, presence: true

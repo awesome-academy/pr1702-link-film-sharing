@@ -25,7 +25,7 @@ class PostsController < ApplicationController
       increment_view
     end
 
-    @posts = Post.load_info_post_new.all_except(params[:id]).limit(10).order("view DESC")
+    @posts = Post.load_info_post_new.all_except(params[:id]).limit(Settings.post_limit_8).order("view DESC")
     @comments = Comment.where(post_id: @post).order("created_at DESC")
   end
 
